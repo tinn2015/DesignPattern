@@ -35,7 +35,8 @@ class HotelService {
 	}
 }
 
-// 按照开闭原则设计
+// ==================按照开闭原则设计=================
+
 import {Room, User} from './sub/user'
 import {gold} from './sub/gold'
 
@@ -61,5 +62,6 @@ const user1 = new gold()
 const price1 = hotelService.getRoomPrice(user1, {price: 100})
 
 // 总结
+// 上述实例还是需要判断不同的user,才能通过hotelService.getRoomPrice获取优惠价格， 可以通过策略模式或者工厂模式改造
 // 开放封闭原则是让我们可以做到尽量不动已有的逻辑， 通过添加新代码来满足需求
 // 与单一职责有相似之处都是面向接口、抽象出一个类来组合具体的实现， 而不是直接把具体实现写在当前类中
