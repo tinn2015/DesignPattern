@@ -18,3 +18,8 @@ bankStaff.handleProcess(action)
 // 取钱
 const action2 = new WithDrawMoney()
 bankStaff.handleProcess(action2)
+
+/**
+ * 通过这种方式， 新的需求比如转账， 只需要添加一个转账类就可以了
+ * 这就是对拓展开放， 对修改封闭
+ */
